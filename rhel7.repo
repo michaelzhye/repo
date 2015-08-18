@@ -1,0 +1,54 @@
+[base]
+name=CentOS-$releasever - Base
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+baseurl=http://dk2dg.prod.mediav.com/base
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#released updates 
+[updates]
+name=CentOS-$releasever - Updates
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+#baseurl=http://mirror.centos.org/centos/$releasever/updates/$basearch/
+baseurl=http://dk2dg.prod.mediav.com/updates
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://dk2dg.prod.mediav.com/extras
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#additional packages that extend functionality of existing packages
+[other]
+name=CentOS-$releasever - other
+baseurl=http://dk2dg.prod.mediav.com/other
+gpgcheck=0
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+
+[mesosphere]
+name=Mesosphere Packages for EL 7 - $basearch
+baseurl=http://repos.mesosphere.io/el/7/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mesosphere
+
+[mesosphere-noarch]
+name=Mesosphere Packages for EL 7 - noarch
+baseurl=http://repos.mesosphere.io/el/7/noarch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mesosphere
+
+[mesosphere-source]
+name=Mesosphere Packages for EL 7 - $basearch - Source
+baseurl=http://repos.mesosphere.io/el/7/SRPMS/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mesosphere
+
